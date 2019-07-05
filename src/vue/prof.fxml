@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="621.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ProfController">
+   <children>
+      <StackPane fx:id="contenteurPrefet" layoutX="182.0" layoutY="45.0" prefHeight="482.0" prefWidth="739.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="45.0" />
+      <JFXDrawer fx:id="drawer" layoutX="1.0" layoutY="45.0" prefHeight="482.0" prefWidth="176.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <VBox fx:id="box" focusTraversable="true" prefHeight="482.0" prefWidth="164.0" style="-fx-background-color: #90a4ae;">
+               <children>
+                  <AnchorPane fx:id="paneUser" prefHeight="98.0" prefWidth="176.0">
+                     <children>
+                        <ImageView fitHeight="146.0" fitWidth="176.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true" styleClass="icone">
+                           <image>
+                              <Image url="@../images/user-bg.jpg" />
+                           </image>
+                        </ImageView>
+                        <Circle fx:id="cir2" fill="DODGERBLUE" layoutX="48.0" layoutY="47.0" radius="36.0" stroke="#615a5a" strokeType="INSIDE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="92.0" AnchorPane.topAnchor="11.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton fx:id="menuPoint" alignment="CENTER_RIGHT" contentDisplay="RIGHT" onAction="#menuPoint" prefHeight="94.0" prefWidth="176.0" styleClass="menu" stylesheets="@style.css" text="Pointage">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/ic_query_builder_black_36dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="menuAgent" alignment="CENTER_RIGHT" contentDisplay="RIGHT" onAction="#menuAgent" prefHeight="92.0" prefWidth="176.0" styleClass="menu" stylesheets="@style.css" text="Agent">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/ic_perm_identity_black_48dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <cursor>
+                 
+               </cursor>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXDrawer>
+      <AnchorPane layoutX="1.0" layoutY="-2.0" prefHeight="50.0" prefWidth="930.0" style="-fx-background-color: #DDDD0D;" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-6.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" layoutY="-6.0" prefHeight="51.0" prefWidth="932.0" style="-fx-background-color: #29b6f6;" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-6.0">
+         <children>
+            <JFXHamburger fx:id="humberger" layoutX="11.0" layoutY="14.0" />
+            
+            
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

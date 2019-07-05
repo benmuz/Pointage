@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="cardPane" prefHeight="460.0" prefWidth="542.0" style="-fx-background-color: #DDDDDD;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.LoginController">
+    <children>
+      <AnchorPane prefHeight="186.0" prefWidth="566.0" style="-fx-background-color: #29b6f6;">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="521.0" layoutY="14.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_close_white_24dp.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="151.0" layoutY="28.0" prefHeight="405.0" prefWidth="264.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8px;">
+         <children>
+            <JFXButton fx:id="btn_log" buttonType="RAISED" layoutX="32.0" layoutY="352.0" onAction="#log" prefHeight="30.0" prefWidth="209.0" style="-fx-background-color: #29b6f6;" text="CONNECTER" underline="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txt_UserName" focusColor="#29b6f6" labelFloat="true" layoutX="63.0" layoutY="216.0" maxWidth="185.0" minWidth="178.0" prefHeight="31.0" prefWidth="178.0" promptText="Nom utilisateur" />
+            <JFXPasswordField fx:id="txtp_Password" focusColor="#29b6f6" labelFloat="true" layoutX="63.0" layoutY="280.0" maxWidth="185.0" minWidth="178.0" onKeyPressed="#entrer" prefHeight="31.0" prefWidth="178.0" promptText="Mots de passe" />
+            <ImageView fitHeight="167.0" fitWidth="172.0" layoutX="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_account_circle_black_48dp.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lbl_ErrorMsg" layoutX="32.0" layoutY="312.0" prefHeight="17.0" prefWidth="209.0" textAlignment="CENTER" textFill="#ff000d" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="32.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_perm_identity_black_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="32.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_lock_outline_black_36dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="30.0" layoutX="72.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_lock_open_black_18dp.png" />
+               </image>
+            </ImageView>
+            <JFXProgressBar fx:id="loadProgress" layoutX="32.0" layoutY="337.0" visible="false" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+    </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

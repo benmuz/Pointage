@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import application.MaterialText?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="702.0" prefWidth="505.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.AddAgentController">
+   <children>
+      <JFXTextField fx:id="txt_nom" focusColor="#29b6f6" labelFloat="true" layoutX="61.0" layoutY="189.0" promptText="Nom" />
+      <JFXTextField fx:id="txt_postnom" focusColor="#29b6f6" labelFloat="true" layoutX="209.0" layoutY="189.0" promptText="Post Nom" />
+      <JFXTextField fx:id="txt_prenom" focusColor="#29b6f6" labelFloat="true" layoutX="358.0" layoutY="182.0" maxWidth="123.0" minWidth="123.0" prefHeight="31.0" prefWidth="123.0" promptText="Prénom" />
+      <MaterialText layoutX="225.0" layoutY="28.0" text="Nouvelle agent" />
+      <JFXRadioButton fx:id="homme" layoutX="79.0" layoutY="240.0" text="Homme" />
+      <JFXRadioButton fx:id="femme" layoutX="79.0" layoutY="274.0" text="Femme" />
+      <JFXComboBox fx:id="txt_titre" layoutX="62.0" layoutY="302.0" prefHeight="31.0" prefWidth="411.0" promptText="Titre" />
+      <JFXTextField fx:id="txt_phone" focusColor="#29b6f6" labelFloat="true" layoutX="61.0" layoutY="377.0" maxWidth="149.0" minWidth="149.0" prefHeight="31.0" prefWidth="149.0" promptText="Telephone" />
+      <JFXTextField fx:id="txt_mail" focusColor="#29b6f6" labelFloat="true" layoutX="264.0" layoutY="377.0" maxWidth="234.0" minWidth="218.0" prefHeight="31.0" prefWidth="218.0" promptText="Email" />
+      <JFXTextField fx:id="txt_adresse" focusColor="#29b6f6" labelFloat="true" layoutX="61.0" layoutY="442.0" maxWidth="418.0" minWidth="418.0" prefHeight="31.0" prefWidth="418.0" promptText="Adresse" />
+      <JFXTextField fx:id="txt_lieu" focusColor="#29b6f6" labelFloat="true" layoutX="60.0" layoutY="564.0" maxWidth="418.0" minWidth="418.0" prefHeight="31.0" prefWidth="418.0" promptText="Lieu de naissance" />
+      <JFXTextField fx:id="txt_natio" focusColor="#29b6f6" labelFloat="true" layoutX="63.0" layoutY="613.0" maxWidth="418.0" minWidth="411.0" prefHeight="31.0" prefWidth="418.0" promptText="Nationalité" />
+      <JFXButton fx:id="btn_cancel" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" layoutX="272.0" layoutY="658.0" onAction="#annuler" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #FA0000;" text="Annuler">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_remove_circle_black_18dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn_save" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" layoutX="372.0" layoutY="659.0" onAction="#enregistrer" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #29b6f6;" text="Enregister">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_save_black_18dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <DatePicker fx:id="txt_date" layoutX="63.0" layoutY="510.0" prefHeight="25.0" prefWidth="411.0" promptText="Date de naissance" />
+      <Circle fx:id="cir2" fill="DODGERBLUE" layoutX="265.0" layoutY="104.0" radius="61.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Circle>
+      <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="37.0" layoutY="613.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ic_language_black_48dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="37.0" layoutY="568.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ic_map_black_36dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="37.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ic_date_range_black_36dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="37.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ic_person_pin_circle_black_48dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="311.0" layoutY="141.0" onMouseClicked="#openDialog" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ic_perm_media_black_48dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="37.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ic_perm_identity_black_48dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="37.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ic_perm_phone_msg_black_48dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="241.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ic_mail_outline_black_48dp.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="matricule" focusColor="DODGERBLUE" layoutX="365.0" layoutY="5.0" promptText="matricule" />
+      <JFXButton fx:id="imprimer" layoutX="40.0" layoutY="16.0" onAction="#imprimer" styleClass="menu" stylesheets="@style.css" text="Imprimer">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_print_black_48dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Imprimer" />
+         </tooltip>
+      </JFXButton>
+   </children>
+</AnchorPane>
